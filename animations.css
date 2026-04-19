@@ -1,0 +1,87 @@
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@keyframes scaleIn {
+  from { opacity: 0; transform: scale(0.92); }
+  to   { opacity: 1; transform: scale(1); }
+}
+
+@keyframes pulse {
+  0%, 100% { box-shadow: 0 0 0 0 var(--accent-glow); }
+  50%       { box-shadow: 0 0 0 8px transparent; }
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+
+.card {
+  animation: fadeUp var(--t-slow) var(--ease-out) both;
+}
+
+
+.news-grid .card:nth-child(1)  { animation-delay: 0.05s; }
+.news-grid .card:nth-child(2)  { animation-delay: 0.10s; }
+.news-grid .card:nth-child(3)  { animation-delay: 0.15s; }
+.news-grid .card:nth-child(4)  { animation-delay: 0.20s; }
+.news-grid .card:nth-child(5)  { animation-delay: 0.25s; }
+.news-grid .card:nth-child(6)  { animation-delay: 0.30s; }
+.news-grid .card:nth-child(7)  { animation-delay: 0.35s; }
+.news-grid .card:nth-child(8)  { animation-delay: 0.40s; }
+.news-grid .card:nth-child(9)  { animation-delay: 0.45s; }
+.news-grid .card:nth-child(10) { animation-delay: 0.50s; }
+
+.hero-badge,
+.hero h1,
+.hero p,
+.hero-search {
+  animation: fadeUp var(--t-slow) var(--ease-out) both;
+}
+.hero h1         { animation-delay: 0.08s; }
+.hero p          { animation-delay: 0.14s; }
+.hero-search     { animation-delay: 0.20s; }
+
+.tabs-section { animation: fadeIn 0.3s ease both; }
+
+.pref-card {
+  animation: scaleIn var(--t-mid) var(--ease-out) both;
+}
+.prefs-grid .pref-card:nth-child(1) { animation-delay: 0.05s; }
+.prefs-grid .pref-card:nth-child(2) { animation-delay: 0.10s; }
+.prefs-grid .pref-card:nth-child(3) { animation-delay: 0.15s; }
+.prefs-grid .pref-card:nth-child(4) { animation-delay: 0.20s; }
+.prefs-grid .pref-card:nth-child(5) { animation-delay: 0.25s; }
+.prefs-grid .pref-card:nth-child(6) { animation-delay: 0.30s; }
+
+.spinner {
+  width: 44px; height: 44px;
+  border: 3px solid var(--border);
+  border-top-color: var(--accent);
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+  margin-inline: auto;
+}
+
+.card-bookmark-btn.pop {
+  animation: bookmarkPop 0.35s var(--ease) both;
+}
+@keyframes bookmarkPop {
+  0%   { transform: scale(1); }
+  50%  { transform: scale(1.35); }
+  100% { transform: scale(1); }
+}
+
+.theme-btn.spin-once {
+  animation: spin 0.45s linear 1;
+}
+
+.tab-btn.active { animation: pulse 2s infinite; }
